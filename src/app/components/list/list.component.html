@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="valute">
+    <h4>Меняю</h4>
+    <mat-form-field>
+      <mat-label>Сколько</mat-label>
+      <input matInput type="number" class="example-right-align" (input)="onNumberChange($event)" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Выберите валюту</mat-label>
+      <mat-select (selectionChange)="onCurrencyChange($event.value, true)" name="A" [(value)]="selectedCurrencyA">
+        <mat-option *ngFor="let datas of rates" [value]="datas" (click)="number(datas, true)">{{datas }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="button">
+    <img src="../../../assets/images/equals.png">
+    <button mat-stroked-button color="warn" (click)="reverse()">
+      <mat-icon>swap_horiz</mat-icon>
+    </button>
+  </div>
+  <div class="valute">
+    <h4>Получаю</h4>
+    <mat-form-field>
+      <input matInput type="number" readonly [value]="result | number:'1.1-2'" class="input-result">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Выберите валюту</mat-label>
+      <mat-select (selectionChange)="onCurrencyChange($event.value, false)" name="B" [(value)]="selectedCurrencyB">
+        <mat-option *ngFor="let datas of rates " [value]="datas" (click)="number(datas, false)">{{datas}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button mat-stroked-button color="warn" (click)="calculate(sum)">Рассчитать</button>
+    </div>
+  </div>
+</div>
+<div>
+
+</div>

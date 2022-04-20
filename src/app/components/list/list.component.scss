@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    align-items: flex-end;
+}
+.valute {
+    display: flex;
+    column-gap: 2rem;
+}
+.button {
+    margin: 0 1rem;
+}
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+.mat-input-element:disabled{
+    text-align: right;
+}
+.button {
+    display: flex;
+    flex-direction: column-reverse;
+}
+h4 {
+    position: absolute;
+    top: 13rem;
+}
