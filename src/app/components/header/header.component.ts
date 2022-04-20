@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   uahToUsd: any
   uahToEur: any
   number: any
+  date: any
 
   constructor(private dataService: DataService) { }
 
