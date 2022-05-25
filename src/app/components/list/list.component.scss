@@ -1,27 +1,120 @@
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
     align-items: flex-end;
+    padding-left: 40px;
+    padding-right: 40px;
 }
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    border: 1px solid #e0e1e5;
+    border-radius: 20px;
+    padding-bottom: 75px;
+}
+
 .valute {
     display: flex;
     column-gap: 2rem;
+    flex-wrap: wrap;
 }
+
+.items {
+    position: absolute;
+    top: 30vh;
+}
+
 .button {
     margin: 0 1rem;
+    padding-bottom: 1rem;
 }
+
 input.example-right-align::-webkit-inner-spin-button {
     display: none;
 }
-.mat-input-element:disabled{
+
+.mat-input-element:disabled {
     text-align: right;
 }
+
 .button {
     display: flex;
     flex-direction: column-reverse;
 }
+
+.buttonCalculate {
+    position: absolute;
+    top: 35vh;
+}
+
 h4 {
     position: absolute;
-    top: 13rem;
+    top: 8rem;
+}
+
+.sum {
+    padding-top: 14px;
+}
+
+@media (max-width: 1080px) {
+    .valute {
+        display: flex;
+        grid-column-gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+    }
+
+    .buttonCalculate {
+        position: absolute;
+        top: 50vh;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 6rem;
+        align-items: center;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px;
+        border: 1px solid #e0e1e5;
+        border-radius: 20px;
+        padding-bottom: 110px;
+    }
+
+    h4 {
+        position: absolute;
+        top: 7rem;
+    }
+}
+
+@media (max-width: 980px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px;
+        border: 1px solid #e0e1e5;
+        border-radius: 20px;
+        padding-bottom: 44px;
+    }
+
+    .buttonCalculate {
+        position: absolute;
+        top: 45vh;
+    }
 }

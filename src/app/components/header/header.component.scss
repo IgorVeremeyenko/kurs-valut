@@ -1,9 +1,58 @@
 .mat-toolbar {
-    box-shadow: 0px 1px 4px 0px black;
+    // box-shadow: 0px 1px 4px 0px black;
     display: flex;
     justify-content: space-around;
+    color: white;
+    background-color: #333333;
 }
+
+a {
+    color: wheat;
+}
+
+.val {
+    display: flex;
+    column-gap: 10px;
+}
+
+.val img {
+    height: 30px;
+}
+
+.valutes {
+    display: flex;
+    column-gap: 1rem;
+}
+
 .logo {
     display: flex;
     align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 770px) {
+    .lang {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        padding-bottom: 2px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .mat-toolbar {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        background-color: #333333;
+        padding-top: 9px;
+        height: 60px;
+    }
 }

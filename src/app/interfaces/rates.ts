@@ -1,5 +1,6 @@
 export interface Rates {
-    USD: string,
-    EUR: string,
-    UAH: string
+    USD: number,
+    EUR: number,
+    UAH: number,
+    RUB: number
 }

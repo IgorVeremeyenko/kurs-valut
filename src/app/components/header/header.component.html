@@ -1,16 +1,48 @@
-<mat-toolbar color="warn">
+<mat-toolbar>
   <div class="logo">
-    <img src="../../../assets/images/currency.png" style="width: 48px; padding-right: 1rem;">
-    <span>
-      Курс валют по результатам НБУ
-    </span>    
+    <a href="#"> <img src="../../../assets/images/currency.png" style="width: 48px; padding-right: 1rem;"></a>
+    <a href="#" style="text-decoration: none;"> EXCHANGE </a>
   </div>
-    <span class="example-spacer"></span>
-    <div>
-      <span>Доллар </span>{{uahToUsd}}
-      <br>
-      <span>Евро </span>{{uahToEur}}
+  <div class="hamburger">
+    <a href="#"> <img src="../../../assets/images/currency.png" style="width: 48px; padding-right: 1rem;"></a>
+    <button mat-icon-button (menuOpened)="onClick()" [matMenuTriggerFor]="menu2" (menuClosed)="onClick()">
+      <mat-icon *ngIf="isClicked">menu_open</mat-icon>
+      <mat-icon *ngIf="!isClicked">menu</mat-icon>
+    </button>
+    <mat-menu #menu2="matMenu">
+      <button mat-menu-item (click)="openDialog()">
+        <mat-icon>account_circle</mat-icon>Войти
+      </button>
+      <button mat-menu-item>
+        <mat-icon>info</mat-icon> Служба поддержки
+      </button>
+      <button mat-menu-item>
+        <mat-icon>mail</mat-icon>Эл. адрес
+      </button>
+    </mat-menu>
+  </div>
+  <span class="example-spacer"></span>
+  <div class="valutes">
+    <div class="val" matTooltip="USD">
+      <span><img src="../../../assets/images/usa-svgrepo-com.svg" alt="UAH to USD"></span>{{uahToUsd}}
     </div>
-    <div>
+    <br>
+    <div class="val" matTooltip="EUR">
+      <span><img src="../../../assets/images/european-union-svgrepo-com.svg" alt="UAH to EUR"></span>{{uahToEur}}
     </div>
-  </mat-toolbar>
+  </div>
+  <div class="lang">
+    <button mat-button [matMenuTriggerFor]="menu">Помощь <mat-icon>contact_support</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>info</mat-icon> Служба поддержки
+      </button>
+      <button mat-menu-item>
+        <mat-icon>mail</mat-icon>Эл. адрес
+      </button>
+    </mat-menu>
+    <button mat-button (click)="openDialog()">Войти <mat-icon>account_circle</mat-icon></button>
+  </div>
+  <div>
+  </div>
+</mat-toolbar>

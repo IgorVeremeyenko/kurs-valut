@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // Material Navigation
@@ -55,6 +56,7 @@ import { MatTableModule } from '@angular/material/table';
     MatCheckboxModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    NgxMatSelectSearchModule,
     MatInputModule,
     MatRadioModule,
     MatSelectModule,
@@ -95,6 +97,7 @@ import { MatTableModule } from '@angular/material/table';
     MatInputModule,
     MatRadioModule,
     MatSelectModule,
+    NgxMatSelectSearchModule,
     MatSliderModule,
     MatSlideToggleModule,
     MatMenuModule,

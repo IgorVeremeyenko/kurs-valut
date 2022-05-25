@@ -8,11 +8,16 @@ import { Currencies } from '../interfaces/currencies';
 export class DataService {
 
   public url = "https://cdn.cur.su/api/nbu.json"
+  public url2 = "https://cdn.cur.su/api/latest.json"
+  public urlMonoBank = "https://api.monobank.ua/bank/currency"
 
   constructor(private _http: HttpClient) { }
 
-  loadData(){
+  loadFromNBU() {
     return this._http.get<Currencies>(this.url);
+  }
+  loadFromAnotherNBULink() {
+    return this._http.get<Currencies>(this.url2);
   }
 
 }
