@@ -11,13 +11,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { DialogOverviewExampleDialog, HeaderComponent } from './components/header/header.component';
 import { ListComponent } from './components/list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ListComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    FooterComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

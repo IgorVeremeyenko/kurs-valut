@@ -3,11 +3,11 @@
     <div class="valute">
       <h4>Меняю</h4>
       <mat-form-field class="sum">
-        <mat-label>Сколько</mat-label>
+        <mat-label *ngIf="sum === 0">Сколько</mat-label>
         <input matInput type="number" class="example-right-align" (input)="onNumberChange($event)" required>
       </mat-form-field>
       <mat-form-field class="sum">
-        <mat-label>Выберите валюту</mat-label>
+        <mat-label *ngIf="!selectedCurrencyA">Выберите валюту</mat-label>
         <mat-select (selectionChange)="onCurrencyChange($event.value, true)" name="A" [(value)]="selectedCurrencyA">
           <mat-select-trigger *ngIf="selectedCurrencyA" matTooltip="{{selectedCurrencyA.name}}">
             <img with="30px" height="20px" src="{{selectedCurrencyA.flag}}">
@@ -31,7 +31,7 @@
         <input matInput type="text" readonly [value]="result | number:'1.1-2'" class="input-result">
       </mat-form-field>
       <mat-form-field class="sum">
-        <mat-label>Выберите валюту</mat-label>
+        <mat-label *ngIf="!selectedCurrencyB">Выберите валюту</mat-label>
         <mat-select (selectionChange)="onCurrencyChange($event.value, false)" name="B" [(value)]="selectedCurrencyB">
           <mat-select-trigger *ngIf="selectedCurrencyB" matTooltip="{{selectedCurrencyB.name}}">
             <img with="30px" height="20px" src="{{selectedCurrencyB.flag}}">

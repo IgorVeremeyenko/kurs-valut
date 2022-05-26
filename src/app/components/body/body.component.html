@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="main">
+        <div *ngIf="firstCurrency" class="name">
+            <h3>Конвертировать {{firstCurrency?.name}} в {{secondCurrency?.name}}</h3>
+        </div>
+        <div class="logos">
+            <div *ngIf="firstCurrency" class="logos-2">
+                <div class="under-logos">
+                    <img width="33" [src]="firstCurrency.flag" alt="nameA">
+                    <h2>{{firstCurrency?.currency}}</h2>
+                </div>
+                <div class="under-logos">
+                    <img width="33" [src]="secondCurrency.flag" alt="nameB">
+                    <h2>{{secondCurrency?.currency}}</h2>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="firstCurrency; else elseBlock;" class="list">
+            <mat-selection-list #operations [multiple]="false" [disableRipple]="true">
+                <div class="list-numbers">
+                    <mat-list-option *ngFor="let count of calculate" [value]="count">
+                        <div style="display: flex;align-items: center;">
+                            {{count}}<mat-icon>chevron_right</mat-icon>
+                        </div>
+                    </mat-list-option>
+                </div>
+                <div class="list-calculates">
+                    <mat-list-option *ngFor="let res of result" [value]="operations">
+                        {{res | number:'1.1-6'}} {{secondCurrency.currency}}
+                    </mat-list-option>
+                </div>
+            </mat-selection-list>
+        </div>
+        <ng-template class="elseBlock" #elseBlock>
+            <h3>EXCHANGE</h3>
+        </ng-template>
+    </div>
+</div>

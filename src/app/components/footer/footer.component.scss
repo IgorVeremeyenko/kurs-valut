@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 20px;
+    display: flex;
+    grid-column-gap: 2rem;
+    column-gap: 2rem;
+}
+
+p {
+    color: white;
+}
+
+.main-footer {
+    background-color: #1d1d21;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0 79px;
+    min-height: 31vh;
+    overflow: hidden;
+}

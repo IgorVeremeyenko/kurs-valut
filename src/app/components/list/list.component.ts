@@ -4,6 +4,7 @@ import { map, Observable, of, startWith } from 'rxjs';
 import { Currencies } from 'src/app/interfaces/currencies';
 import { Rates } from 'src/app/interfaces/rates';
 import { DataService } from 'src/app/services/data.service';
+import { SimpleService } from 'src/app/services/simple.service';
 
 export interface State {
   flag: string;
@@ -63,7 +64,7 @@ export class ListComponent implements OnInit {
   indexLeft: number = 0
   indexRight: number = 0
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private readonly simpleService: SimpleService) {
     this.filteredLeft = this.stateCtrl.valueChanges.pipe(
       startWith(''),
       map((state: string) => (state ? this._filterStates(state) : this.states.slice())),
@@ -94,14 +95,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.loadFromAnotherNBULink().subscribe(items => {
       this.dataRates.push(items.rates);
-      this.dataRates.map(y => {
-        console.log(y)
-      })
     })
-  }
-
-  myEvents(event: any) {
-
   }
 
   reverse() {
@@ -119,9 +113,17 @@ export class ListComponent implements OnInit {
   }
 
   calculate(sum: number) {
-    if (this.indexLeft != undefined && this.indexRight != undefined) {
-      this.result = (this.indexRight / this.indexLeft) * sum
+    if (this.indexLeft != 0 && this.indexRight != 0) {
+      this.result = (this.indexRight / this.indexLeft) * sum;
+      const preSum = (this.indexRight / this.indexLeft);
+      this.setAnyCount(preSum);
+      this.simpleService.setFirstValyte(this.selectedCurrencyA);
+      this.simpleService.setSecondValyte(this.selectedCurrencyB);
     }
+  }
+
+  setAnyCount(result: number): void {
+    this.simpleService.changeCount(result);
   }
 
   number(currency: string, index: boolean) {

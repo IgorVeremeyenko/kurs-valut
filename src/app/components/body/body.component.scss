@@ -1,0 +1,33 @@
+.container {
+    padding: 1rem;
+}
+
+.main {
+    border: 1px solid #e0e1e5;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 0 15rem;
+}
+
+h3 {
+    text-align: center;
+}
+
+.logos-2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.mat-selection-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.under-logos {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
