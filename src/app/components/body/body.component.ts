@@ -16,6 +16,29 @@ export class BodyComponent implements OnInit {
 
   calculate: number[] = [1, 10, 100, 500, 1000];
 
+  selection = [
+    {
+      value: 1,
+      selected: true
+    },
+    {
+      value: 10,
+      selected: true
+    },
+    {
+      value: 100,
+      selected: true
+    },
+    {
+      value: 500,
+      selected: true
+    },
+    {
+      value: 1000,
+      selected: true
+    },
+  ]
+
   result: number[] = [];
 
   selectedOptions: any
@@ -28,11 +51,11 @@ export class BodyComponent implements OnInit {
         this.result.push(this.calculate[index] * this.counter)
       }
     });
-    this.simpleService.firstValute$.subscribe(obj => { this.firstCurrency = obj; console.log(obj) });
+    this.simpleService.firstValute$.subscribe(obj => this.firstCurrency = obj);
     this.simpleService.secondValute$.subscribe(obj2 => this.secondCurrency = obj2);
   }
-  show(event: any) {
-    console.log(event)
+  show(event: number) {
+    this.simpleService.setChangedSum(event);
   }
 
 }

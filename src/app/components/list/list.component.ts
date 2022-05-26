@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { map, Observable, of, startWith } from 'rxjs';
-import { Currencies } from 'src/app/interfaces/currencies';
 import { Rates } from 'src/app/interfaces/rates';
 import { DataService } from 'src/app/services/data.service';
 import { SimpleService } from 'src/app/services/simple.service';
@@ -87,6 +86,11 @@ export class ListComponent implements OnInit {
     this.calculate(this.sum)
   }
 
+  handleNumberChange(value: number) {
+    this.sum = value;
+    this.calculate(value);
+  }
+
   onCurrencyChange(value: string, selectedSide: boolean) {
     if (selectedSide) this.selectedCurrencyA = value
     else this.selectedCurrencyB = value
@@ -96,6 +100,11 @@ export class ListComponent implements OnInit {
     this.dataService.loadFromAnotherNBULink().subscribe(items => {
       this.dataRates.push(items.rates);
     })
+    this.simpleService.changedSum$.subscribe(sum => {
+      console.log(sum)
+      this.sum = sum;
+      this.handleNumberChange(sum);
+    });
   }
 
   reverse() {

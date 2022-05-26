@@ -18,9 +18,10 @@
         <div *ngIf="firstCurrency; else elseBlock;" class="list">
             <mat-selection-list #operations [multiple]="false" [disableRipple]="true">
                 <div class="list-numbers">
-                    <mat-list-option *ngFor="let count of calculate" [value]="count">
+                    <mat-list-option *ngFor="let count of selection" [value]="count?.value"
+                        (click)="show(operations.selectedOptions.selected[0]?.value)">
                         <div style="display: flex;align-items: center;">
-                            {{count}}<mat-icon>chevron_right</mat-icon>
+                            {{count?.value}}<mat-icon>chevron_right</mat-icon>
                         </div>
                     </mat-list-option>
                 </div>
