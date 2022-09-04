@@ -1,0 +1,113 @@
+{
+  "configVersion": 1,
+  "timestamp": 1662294522125,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.475f9f926faf2037.js",
+        "/manifest.webmanifest",
+        "/polyfills.92ef5ecd088e5c74.js",
+        "/runtime.26c71b59d7e5389d.js",
+        "/styles.2781de30100bbe0b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/animations/search.json",
+        "/assets/i18n/en.json",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/images/190330123532.zip",
+        "/assets/images/currency.ico",
+        "/assets/images/currency.png",
+        "/assets/images/equals.png",
+        "/assets/images/european-union-svgrepo-com.svg",
+        "/assets/images/european-union.png",
+        "/assets/images/facebook-svgrepo-com.svg",
+        "/assets/images/github-svgrepo-com.svg",
+        "/assets/images/linkedin-svgrepo-com.svg",
+        "/assets/images/profile-svgrepo-com.svg",
+        "/assets/images/ukraine-svgrepo-com.svg",
+        "/assets/images/ukraine.png",
+        "/assets/images/united-states.png",
+        "/assets/images/usa-svgrepo-com.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/animations/search.json": "6acd3d32de7cf78f71d5a875466cf6385471c888",
+    "/assets/i18n/en.json": "04ef71b7e3a7c205d1ea8e850529a1eec7da45e3",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/images/190330123532.zip": "306405d148ec5c0502ab4ca8314fb450c9ed38b7",
+    "/assets/images/currency.ico": "c8f127bbe2390f8fd62c80c584d072a7500eb059",
+    "/assets/images/currency.png": "87b50fb41249ca9910dd894189147003bf2f4bce",
+    "/assets/images/equals.png": "5f08655ba4ce94a6200ad1d2d7176670930784a9",
+    "/assets/images/european-union-svgrepo-com.svg": "46026188f77e61d946554cf6f2ae44bb6cc72a08",
+    "/assets/images/european-union.png": "dcc91ea177389b35d10e8c78d766342936bd4e0f",
+    "/assets/images/facebook-svgrepo-com.svg": "13e6c3f1b465af1fa32f01d32f177eec16d5f37f",
+    "/assets/images/github-svgrepo-com.svg": "9f01ed5840985196121ccc8e4248f8687d4ed262",
+    "/assets/images/linkedin-svgrepo-com.svg": "e7105a1ddff7b80473e7d9e17fbe347386f86dea",
+    "/assets/images/profile-svgrepo-com.svg": "082b9b238cf839fab139f295c82cec649ddfc88b",
+    "/assets/images/ukraine-svgrepo-com.svg": "d26fb7718561633090573d87d46e106bfb4fb243",
+    "/assets/images/ukraine.png": "9a31a2d76e27ead62e8db3ce0307cda2ae45a314",
+    "/assets/images/united-states.png": "303d64f95c1613af70dd362d17f4fc43bab404e0",
+    "/assets/images/usa-svgrepo-com.svg": "8442e7c6e222cf39ac2e1e4551406135c21fa89a",
+    "/favicon.ico": "c8f127bbe2390f8fd62c80c584d072a7500eb059",
+    "/index.html": "f241fe86388099b0cf91648e122f3273d625e3af",
+    "/main.475f9f926faf2037.js": "ec2c2decb57b408ef2bfb492b1d5045ce6d411c8",
+    "/manifest.webmanifest": "142d417a01008966bdaad3f4607121ccd90c64ad",
+    "/polyfills.92ef5ecd088e5c74.js": "2e344923a4676bd8c5abadd1e8c6d66d1f48c539",
+    "/runtime.26c71b59d7e5389d.js": "d1a694f5086a610fc0fa0abd979b2e11c907e781",
+    "/styles.2781de30100bbe0b.css": "cf448be588643697e781c816110c589f93ce58e9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
